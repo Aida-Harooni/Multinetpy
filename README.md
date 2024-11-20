@@ -18,11 +18,11 @@ weighted_centralities_CC1 = mg.weighted_CC()
 aggregated_centralities_BC1 = mg.aggregated_BC()
 weighted_centralities_BC1 = mg.weighted_BC()
 
-# Use some other centrality measures in networkX
+# Use some other centrality measures in networkx
 test = mg.Centralities(nx.degree_centrality) # define desired centrality measure
 mg.aggregated_centralityTest(nx.degree_centrality)
 
-# Code used for comparing a tabel with calculated centralities
+# Code used for comparing a table with calculated centralities
 file_path1 =' path_BC.xlsx.'
 file_path2 ='path_CC.xlsx'
 
