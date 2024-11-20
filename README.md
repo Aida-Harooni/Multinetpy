@@ -12,8 +12,7 @@ mg = gm.Import_Graph.make_graph(
     "YourPath_nodes_layers.txt"
 )
 
-# Compute centrality measures
-# First define desires centrality measure, including betweenness and closeness
+# Compute desired centrality measure, including betweenness and closeness
 aggregated_centralities_CC1 = mg.aggregated_CC()
 weighted_centralities_CC1 = mg.weighted_CC()
 aggregated_centralities_BC1 = mg.aggregated_BC()
@@ -27,7 +26,7 @@ mg.aggregated_centralityTest(nx.degree_centrality)
 file_path1 =' path_BC.xlsx.'
 file_path2 ='path_CC.xlsx'
 
-# Load the table ranks in cs aarhus
+# Load the table ranks 
 table_rank1 = mg.load_table_ranks_from_excel(file_path1)
 table_rank2 = mg.load_table_ranks_from_excel(file_path2)
 
@@ -35,7 +34,7 @@ table_rank2 = mg.load_table_ranks_from_excel(file_path2)
 print("kendall's tau in betweenness:")
 mg.plot_kendall_tau(aggregated_centralities_BC1, weighted_centralities_BC1, table_rank1)
 print("\nkendall's tau in Closeness Centrality:\n")
-mg.plot_kendall_tau(aggregated_centralities_CC1, weighted_centralities_CC1, table_rank1)
+mg.plot_kendall_tau(aggregated_centralities_CC1, weighted_centralities_CC1, table_rank2)
 
 # isim
 a, b, c = mg2.intersection_similarity(table_rank2, aggregated_centralities_CC1, weighted_centralities_CC1, max_k=20)
